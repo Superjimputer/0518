@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+   
+    <style>
+        /*CSS RESET*/
+        
+        * {
+            box-sizing: border-box;
+            font-family: "Oswald";
+        }
+        
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            border: 0;
+            width: 100%;
+            vertical-align: top;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /*CSS RESET 結束*/
+        
+        .full-width {
+            width: 100%;
+        }
+        
+        .fixed-width {
+            width: 1000px;
+            margin: auto;
+        }
+        
+        .col-1,
+        .col-2,
+        .col-3,
+        .col-4 {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .col-2,
+        .col-3,
+        .col-4 {
+            float: left;
+        }
+        
+        .col-1 {
+            width: 980px;
+        }
+        
+        .col-2 {
+            width: 480px;
+        }
+        
+        .col-3 {
+            width: calc(1000px/3 - 20px);
+        }
+        
+        .col-4 {
+            width: 230px;
+        }
+        
+        nav {
+            height: 50px;
+            background-color: black;
+        }
+        
+        nav .logo {
+            float: left;
+            width: 120px;
+            height: 50px;
+            background-color: yellow;
+            text-align: center;
+        }
+        
+        nav .menu {
+            float: right;
+        }
+        
+        nav li {
+            list-style: none;
+            float: left;
+        }
+        
+        nav .menu a {
+            color: ivory;
+            text-decoration: none;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 50px;
+            transition: color .3s;
+        }
+        
+        header {
+            padding-top: 300px;
+            padding-bottom: 300px;
+            /*            height: 600px; */
+            background-image: url(images/header.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        header h1 {
+            text-align: center;
+            color: white;
+        }
+        
+        #about, #portfolio, #services {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        #portfolio {
+            background-color: gray;
+/*            padding-top: 150px;*/
+/*            padding-bottom: 120px;*/
+        }
+        
+        #portfolio .fixed-width:nth-of-type(1) {
+            margin-bottom: 30px;
+        }
+        
+/*        #portfolio .col-3 {margin-bottom: 30px;}*/
+        
+        #services {text-align: center;}
+/*        #services .icon {text-align: center;}*/
+        
+        #services p {margin-top: 20px;
+        margin-bottom: 20px;}
+        
+        .btn {display:inline-block;
+        padding: 6px 20px;
+        text-decoration: none;
+        background-color: darkgray;
+        color: white;
+        transition: color .5s, background-color .5s;
+/*        transition: all .5s;*/
+        }
+        
+        .btn-inverse {display:inline-block;
+        padding: 6px 20px;
+        text-decoration: none;
+        background-color: lightgray;
+        color: white;}
+        
+        .title {text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;}
+        
+        footer {
+            background-color: gray;
+            color: white;
+            padding: 20px 0;
+        }
+        
+        footer .social {text-align: right;}
+        
+        footer .social a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        
+        nav .menu a:hover {color: orange;}
+        
+        .btn:hover {background-color: orange;
+        color: black;}
+
+/*        footer .social a:hover {color:blue;}*/
+        
+        footer .social a:nth-of-type(1):hover {color:blue;}
+        footer .social a:nth-of-type(2):hover {color:green;}
+        footer .social a:nth-of-type(3):hover {color:red;}
+        footer .social a:nth-of-type(4):hover {color:magenta;}
+    </style>
+</head>
+
+<body>
+    <nav class="full-width">
+        <div class="fixed-width">
+            <div class="logo">Logo</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="full-width">
+        <h1>QWERTY Design</h1>
+    </header>
+    <div class="full-width" id="about">
+        <h2 class="title">About</h2>
+        <div class="fixed-width clearfix">
+            <div class="col-2">
+                <img src="images/about.jpg" alt="">
+            </div>
+            <div class="col-2">
+<!--                <h2>About</h2>-->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, nemo. Eaque earum possimus dignissimos reprehenderit fugit veniam, numquam at repellendus perferendis, magnam ratione distinctio harum consequatur ea maxime, explicabo! Asperiores?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem rem, cum quasi, odio placeat vel. Ex, illo. Aspernatur veritatis porro, facere qui minus laborum. Deserunt fuga necessitatibus explicabo natus quasi.
+                </p>
+                <a href="#" class="btn-inverse">More</a>
+            </div>
+        </div>
+    </div>
+    <div class="full-width" id="portfolio">
+       <h2 class="title">Portfolio</h2>
+        <div class="fixed-width clearfix">
+            <div class="col-3">
+                <img src="images/about.jpg" alt="">
+            </div> 
+               <div class="col-3">
+                <img src="images/about.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="images/about.jpg" alt="">
+            </div>
+            </div>
+            <div class="fixed-width clearfix">
+            <div class="col-3">
+                <img src="images/about.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="images/about.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="images/about.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="full-width" id="services">
+       <h2 class="title">Services</h2>
+        <div class="fixed-width clearfix">
+            <div class="col-4">
+                <div><i class="fa fa-university fa-5x"></i></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dolorem omnis sed quas, illum numquam necessitatibus et laboriosam, deserunt consequatur aspernatur illo quaerat. A perspiciatis rem ut doloribus fugit culpa.</p>
+                <a href="#" class="btn">More</a>
+            </div>
+            <div class="col-4">
+                <div><i class="fa fa-address-book fa-5x"></i></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dolorem omnis sed quas, illum numquam necessitatibus et laboriosam, deserunt consequatur aspernatur illo quaerat. A perspiciatis rem ut doloribus fugit culpa.</p>
+                <a href="#" class="btn">More</a>
+            </div>
+            <div class="col-4">
+                <div><i class="fa fa-battery-full fa-5x"></i></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dolorem omnis sed quas, illum numquam necessitatibus et laboriosam, deserunt consequatur aspernatur illo quaerat. A perspiciatis rem ut doloribus fugit culpa.</p>
+                <a href="#" class="btn">More</a>
+            </div>
+            <div class="col-4">
+                <div><i class="fa fa-cog fa-5x"></i></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dolorem omnis sed quas, illum numquam necessitatibus et laboriosam, deserunt consequatur aspernatur illo quaerat. A perspiciatis rem ut doloribus fugit culpa.</p>
+                <a href="#" class="btn">More</a>
+            </div>
+        </div>
+    </div>
+    <footer class="full-width">
+        <div class="fixed-width clearfix">
+            <div class="col-2">
+                <div class="copyright">
+                    2017 &copy; All Rights Reserved. Design by QWERTY.
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="social">
+                    <a href="#" class="fa fa-facebook fa-lg"></a>
+                    <a href="#" class="fa fa-instagram fa-lg"></a>
+                    <a href="#" class="fa fa-envelope fa-lg"></a>
+                    <a href="#" class="fa fa-twitter fa-lg"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
